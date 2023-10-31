@@ -51,6 +51,7 @@ Shang grabs a spare napkin and writes on it. He writes "天上" and shows it to 
 
 (if:(history: where its name contains "Go home")'s length >= 1)[Not wanting to hang around, Shang leaves, glad that he still has his life. He rushes off into the association and closes the door firmly behind him. This building, the interior looks like a pub, and it is packed. There's lots of people lined up at the bar waiting for a taste of the concoction the bartender is making, people looking up at the glaringly bright boards above the bar as if they're checking for the arrival of their morning train, and plenty of chatter going about between the locals. Looking closer at the boards, Shang sees a constant flow of tasks flooding the screens, most of them requesting for different materials to be gathered from the surrounding areas. 
 
+
 People are placed everywhere, but out of the crowd Shang sees a familiar face. The familiar round face, big eyes and little smile everyone could recognise her by: it's Liang Yi. She's sitting alone in a solitary corner of the building, sipping on a red cocktail.
 
 
@@ -187,7 +188,7 @@ Looking outside for the first time, Shang doesn't notice anything off. It's just
 Slowly, Shang gets ready to go outside. He's being very cautious with his movement as to not make too much noise, he grabs his bag which he fills with all that he needs: his keys, a bit of food and water, toiletries, spare clothes, some money he had made a few days ago while busking, and his dizi. Stepping outside, he notices how quiet and peaceful it is, almost like there has never been any chaos in his district or the city at all. 
 
 
-It's only a short journey to the association, but it's taking a long time since Shang doesn't want to attract any attention from anything. Just a minute away from his destination, he hears something quickly approaching from up ahead, the direction of the river. It's a grotesque being, looking like the [[sludge]] that hangs out at the bottom of a river.]
+It's only a short journey to the association, but it's taking a long time since Shang doesn't want to attract any attention from anything. Just a minute away from his destination, he hears something quickly approaching from up ahead, the direction of the river. It's a grotesque being, looking like the (text-colour:#7D3C98)+(bg:white)[[sludge]] that hangs out at the bottom of a river.]
 
 
 :: See who the post was made by {"position":"1700,800","size":"100,100"}
@@ -214,6 +215,11 @@ Shang picks everything else he had off of the ground and put them back into his 
 
 :: Talk to the bartender {"position":"2750,450","size":"100,100"}
 (if:(history: where its name contains "Fight")'s length >= 1)[(text-colour:#FFA718)[K: Woah buddy, it looks like you got roughed up outside. You can go use the washroom to clean yourself up, just don't make a mess.]]
+
+(if:(history: where its name contains "Talk")'s length >= 1)[(text-colour:#FFA718)[K: It looks like you're running low on food there. You're welcome to have some bar food of your choice, just don't treat it like a buffet.]]
+
+(text-colour:#FFA718)[K: Welcome to the association, buddy. What can I get you?]
+
 
 
 :: report to an association {"position":"1950,500","size":"100,100"}

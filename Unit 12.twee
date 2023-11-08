@@ -12,8 +12,15 @@ Unit 12
 }
 
 
-:: Approach her {"position":"2750,600","size":"100,100"}
-(text-colour:#D32525)[Liang Yi: What a coincidence, I was going to message you, but as you can see, things have come up. Must be fate for us to meet like this.]
+:: Approach her {"position":"2900,600","size":"100,100"}
+<!--If the player chose to fight the slime-->
+
+(if:(history: where its name contains "Fight")'s length >= 1)[(text-colour:#D32525)[Liang Yi: Good to meet you, Shang. I can't help but notice that your clothes are dirty, we should go to the bartender so he can direct us to where we can get you cleaned up.]]
+
+
+<!--If the player chose to talk to the slime-->
+
+(if:(history: where its name contains "Talk")'s length is 1)[(text-colour:#D32525)[Liang Yi: What a coincidence, I was going to message you, but as you can see, things have come up. Must be fate for us to meet like this.]
 
 
 (text-colour:#7D3C98)[Shang: I'm excited to meet you! Umm, how should I refer to you?]
@@ -28,18 +35,34 @@ Liang Yi grabs some napkins from a holder beside her, gets a pen out of her bag 
 Shang grabs a spare napkin and writes on it. He writes "天上" and shows it to Liang Yi.
 
 
-(text-colour:#7D3C98)[Shang: My given name is Tian Shang, but you can just call me Shang.]
-
-<!--If the player chose to fight the slime-->
-
-(if:(history: where its name contains "Fight")'s length >= 1)[(text-colour:#D32525)[Liang Yi: Good to meet you, Shang. I can't help but notice that your clothes are dirty, we should go to the bartender so he can direct us to where we can get you cleaned up.]]
+(text-colour:#7D3C98)[Shang: My given name is Tian Shang, but you can just call me Shang.]]
 
 
-:: At the association {"position":"2600,500","size":"100,100"}
+<!--If the player chose to run from the slime-->
+
+(if:(history: where its name contains "Run")'s length is 1)[(text-colour:#D32525)[Liang Yi: What a coincidence, I was going to message you, but as you can see, things have come up. Must be fate for us to meet like this.]
+
+
+(text-colour:#7D3C98)[Shang: I'm excited to meet you! Umm, how should I refer to you?]
+
+
+Liang Yi grabs some napkins from a holder beside her, gets a pen out of her bag and writes on one of the napkins. She holds it up once she's done, it reads "良亦".
+
+
+(text-colour:#D32525)[Liang Yi: Well that's how you write it, you call me by my given name. Thanks for asking. What's your name?]
+
+
+Shang grabs a spare napkin and writes on it. He writes "天上" and shows it to Liang Yi.
+
+
+(text-colour:#7D3C98)[Shang: My given name is Tian Shang, but you can just call me Shang.]]
+
+
+:: At the association {"position":"2750,500","size":"100,100"}
 <!--If the player confronted the stranger-->
 
 
-(if:(history: where its name contains "Confront the stranger")'s length >= 1)[Not wanting to hang around, Shang leaves, glad that he still has his life. He rushes off into the association and closes the door firmly behind him. This building, the interior looks like a pub, and it is packed. People are everywhere, but there aren't any familiar faces.
+(if:(history: where its name contains "Confront the stranger")'s length >= 1)+(align:"<==>")+(box:"X")[Not wanting to hang around, Shang leaves, glad that he still has his life. He rushes off into the association and closes the door firmly behind him. This building, the interior looks like a pub, and it is packed. People are everywhere, but there aren't any familiar faces.
 
 
 
@@ -49,7 +72,7 @@ Shang grabs a spare napkin and writes on it. He writes "天上" and shows it to 
 <!--If the player went home-->
 
 
-(if:(history: where its name contains "Go home")'s length >= 1)[Not wanting to hang around, Shang leaves, glad that he still has his life. He rushes off into the association and closes the door firmly behind him. This building, the interior looks like a pub, and it is packed. There's lots of people lined up at the bar waiting for a taste of the concoction the bartender is making, people looking up at the glaringly bright boards above the bar as if they're checking for the arrival of their morning train, and plenty of chatter going about between the locals. Looking closer at the boards, Shang sees a constant flow of tasks flooding the screens, most of them requesting for different materials to be gathered from the surrounding areas. 
+(if:(history: where its name contains "Go home")'s length >= 1)+(align:"<==>")+(box:"X")[Not wanting to hang around, Shang leaves, glad that he still has his life. He rushes off into the association and closes the door firmly behind him. This building, the interior looks like a pub, and it is packed. There's lots of people lined up at the bar waiting for a taste of the concoction the bartender is making, people looking up at the glaringly bright boards above the bar as if they're checking for the arrival of their morning train, and plenty of chatter going about between the locals. Looking closer at the boards, Shang sees a constant flow of tasks flooding the screens, most of them requesting for different materials to be gathered from the surrounding areas. 
 
 
 People are placed everywhere, but out of the crowd Shang sees a familiar face. The familiar round face, big eyes and little smile everyone could recognise her by: it's Liang Yi. She's sitting alone in a solitary corner of the building, sipping on a red cocktail.
@@ -60,7 +83,7 @@ People are placed everywhere, but out of the crowd Shang sees a familiar face. T
 
 
 :: Confront the stranger {"position":"1400,500","size":"100,100"}
-Shang manages to catch up with the person who was recording him.
+(align:"<==>")+(box:"X")[Shang manages to catch up with the person who was recording him.
 
 
 He asks her (text-colour:#7D3C98)["What was that about?".]
@@ -74,7 +97,7 @@ She isn't pleased by his tone, (text-colour:#D32525)["If you're going to be like
 
 Shang is a bit taken aback but agrees to what the stranger said she'd do. He watches as she deletes the video of him off of her phone, she then walks away while saying (text-colour:#D32525)["See ya."]
 
-No, Shang didn't want to see this person again. He then makes his way home by traversing the dull streets, taking shortcuts to get there quicker and avoid any trouble.
+No, Shang didn't want to see this person again. He then makes his way home by traversing the dull streets, taking shortcuts to get there quicker and avoid any trouble.]
 
 
 
@@ -82,11 +105,14 @@ No, Shang didn't want to see this person again. He then makes his way home by tr
 
 
 :: Day 1 {"position":"1200,575","size":"100,100"}
+(align:"<==>")+(box:"X")[(text-style:"underline")[''Day 1:'']
+
+
 It's a dreary evening and Tian Shang is playing a final song to anyone who will listen on the streets. He has been playing for around 6 months but has only just been able to get by. For his final song of the evening, he is putting all of his heart and soul into playing beautifully in order to get a bit more money to be able to pay his landlord this month.
 
 As he is playing, he notices a person a bit of a distance away from him who is laughing while recording his performance. To this, the protagonist gets a bit annoyed, "what is there to laugh about?" he thinks.
 
-He finishes his song and packs up his (cycling-link:"dizi","The dizi is a Chinese transverse flute, usually made out of bamboo. It is a major Chinese musical instrument that is widely used in many genres of Chinese folk music, Chinese opera, as well as the modern Chinese orchestra.") quickly.
+He finishes his song and packs up his (cycling-link:"dizi","The dizi is a Chinese transverse flute, usually made out of bamboo. It is a major Chinese musical instrument that is widely used in many genres of Chinese folk music, Chinese opera, as well as the modern Chinese orchestra.") quickly.]
 
 
 
@@ -97,15 +123,21 @@ He finishes his song and packs up his (cycling-link:"dizi","The dizi is a Chines
 
 
 :: Day 4 {"position":"1600,500","size":"100,100"}
+(align:"<==>")+(box:"X")[(text-style:"underline")[''Day 4:'']
+
+
 Shang comes out of a deep sleep to the sound of his alarm, not wanting to get up immediately, he checks his social media feed. Nothing new. He sighs and gets up out of bed. It's a new day, a new opportunity to make some money.
 
-He does his usual morning routine: get dressed, eat breakfast, comb his hair and brush his teeth. As he was eating breakfast, he was looking through the news on his phone. He saw [[the headline]] as the top story:
+He does his usual morning routine: get dressed, eat breakfast, comb his hair and brush his teeth. As he was eating breakfast, he was looking through the news on his phone. He saw [[the headline]] as the top story:]
 
 
-:: Day 4. {"position":"1550,700","size":"100,100"}
+:: Day 4. {"position":"1600,700","size":"100,100"}
+(align:"<==>")+(box:"X")[(text-style:"underline")[''Day 4:'']
+
+
 Shang comes out of a deep sleep to the sound of his alarm, not wanting to get up immediately, he checks his social media feed to find that he has received a message from a friend of his, sent at 22:17. The message is a link to a post with the accompanying text (text-colour:#4A69F3)["Hey, is this you?"] He opens the link to the post and he finds that it's a video, a video of him playing.
 
-Not exactly surprised, he sees that it was only posted an hour ago this morning. 
+Not exactly surprised, he sees that it was only posted an hour ago this morning. ]
 
 
 
@@ -115,14 +147,15 @@ Not exactly surprised, he sees that it was only posted an hour ago this morning.
 --> [[See who the post was made by]]
 
 
-:: Fight {"position":"2450,350","size":"100,100"}
+:: Fight {"position":"2600,350","size":"100,100"}
 (dialog: "The creature looks ready to fight", "Close")
 
-Shang grabs his keys and shoves them between his fingers and takes a fighting stance, ready to attack this creature. 
+(align:"<==>")+(box:"X")[Shang grabs his keys and shoves them between his fingers and takes a fighting stance, ready to attack this creature. 
 
 The sludge isn't that big, only about half of Shang's height (178cm). He goes to attack it with a hook, keeping his guard up. The attacks hits! The creature spaces itself to recover before going to bite Shang's arm. Quickly, he takes a step back, makes a fist and strikes the slimy creature in it's face with the back of his hand. He misses...
 
-The creature manages to take Shang to the ground, snarling in his face while on top of him. Quickly, it's dealt with in only a matter of seconds as Shang gets in a blow to it's face. He pushes it off of him, it seemed to be unconscious.
+
+The creature manages to take Shang to the ground, snarling in his face while on top of him. Quickly, it's dealt with in only a matter of seconds as Shang gets in a blow to it's face. He pushes it off of him, it seemed to be unconscious.]
 
 
 
@@ -130,33 +163,33 @@ The creature manages to take Shang to the ground, snarling in his face while on 
 
 
 :: Go home {"position":"1400,700","size":"100,100"}
-Shang makes his way home by traversing the dull streets and taking shortcuts to get there quicker, trying to get that person out of his mind. He's sure that it wasn't anything serious. 
+(align:"<==>")+(box:"X")[Shang makes his way home by traversing the dull streets and taking shortcuts to get there quicker, trying to get that person out of his mind. He's sure that it wasn't anything serious. 
 
-He gets home and collapses in his bed after the day took all of his energy out of him.
+He gets home and collapses in his bed after the day took all of his energy out of him.]
 
 
 
 --> [[Day 4.]]
 
 
-:: Message his friend back {"position":"1850,800","size":"100,100"}
-Shang sends an excited reply to his friend, telling her that that video was of him and that he can't believe who had posted it. She didn't reply immediately.
+:: Message his friend back {"position":"1950,800","size":"100,100"}
+(align:"<==>")+(box:"X")[Shang sends an excited reply to his friend, telling her that that video was of him and that he can't believe who had posted it. She didn't reply immediately.
 
 After about 10 minutes, his friend messages him back: (text-colour:#4A69F3)["You have some insane luck to be noticed by Liang Yi. I messaged her to say that I know you and sent her a link to your profile."]
 
 Not knowing how to even approach Liang Yi, Shang decides to wait for her to message him.
 
 
-While waiting, he opens scrolls through the news on his phone and sees [[the headline]] as the top story:
+While waiting, he opens scrolls through the news on his phone and sees [[the headline]] as the top story:]
 
 
-:: Read the caption {"position":"1700,650","size":"100,100"}
+:: Read the caption {"position":"1800,650","size":"100,100"}
 (dialog: "Found this hidden gem on the streets of central Shanghai. I didn't want to disturb his excellent performance, but I need his talent for my upcoming group. If you know this guy, please DM me. (text-colour:#be4bdb)[#music] (text-colour:#be4bdb)[#traditionalmusic] (text-colour:#be4bdb)[#busking] (text-colour:#be4bdb)[#Shanghai]", "Close")
 
 --> [[See who the post was made by]]
 
 
-:: Run {"position":"2450,650","size":"100,100"}
+:: Run {"position":"2600,650","size":"100,100"}
 <!--If the player confronted the stranger-->
 
 
@@ -166,20 +199,20 @@ While waiting, he opens scrolls through the news on his phone and sees [[the hea
 <!--If the player went home-->
 
 
-(if:(history: where its name contains "Confront the stranger")'s length >= 1)[(dialog: "Shang successfully escapes", "Close") The creature gives a bit of a chase, but soon gives up. Shang can finally breathe again, he is out of harm's way...for now. 
+(align:"<==>")+(box:"X")[(if:(history: where its name contains "Confront the stranger")'s length >= 1)[(dialog: "Shang successfully escapes", "Close") The creature gives a bit of a chase, but soon gives up. Shang can finally breathe again, he is out of harm's way...for now. ]
 
 
 
 --> [[At the association]]]
 
 
-:: Search Google Maps [Google-Maps] {"position":"2100,500","size":"100,100"}
+:: Search Google Maps [Google-Maps] {"position":"2250,500","size":"100,100"}
 (dialog: "* ↑ Walk south towards Hongqi East Road
 * ↰ Turn left on Honqi East Road
 * ↰ Turn left on Huashan Road
 * ↰ Your destination will be on the left", "Close")
 
-[(text-colour:black)+(bg:white)[=Only around a 20 minute walk away.
+(align:"<==>")+(box:"X")[(text-colour:black)+(bg:white)[=Only around a 20 minute walk away.
 
 
 Looking outside for the first time, Shang doesn't notice anything off. It's just a normal day outside: the sun's peaking out of the clouds, the grass is green and the neighbourhood looks undisturbed. The only thing unusal is the lack of people outside in the morning, no one is commuting to work, no children are walking to school, it's just empty. 
@@ -191,48 +224,52 @@ Slowly, Shang gets ready to go outside. He's being very cautious with his moveme
 It's only a short journey to the association, but it's taking a long time since Shang doesn't want to attract any attention from anything. Just a minute away from his destination, he hears something quickly approaching from up ahead, the direction of the river. It's a grotesque being, looking like the (text-colour:#7D3C98)+(bg:white)[[sludge]] that hangs out at the bottom of a river.]
 
 
-:: See who the post was made by {"position":"1700,800","size":"100,100"}
-Shang clicks on the user's profile. He can't believe the name he reads: (text-colour:grey)[@](text-colour:#74c0fc)[Liang Yi]
+:: See who the post was made by {"position":"1800,800","size":"100,100"}
+(align:"<==>")+(box:"X")[Shang clicks on the user's profile. He can't believe the name he reads: (text-colour:grey)[@](text-colour:#74c0fc)[Liang Yi]
 
-She is a rising singer/songwriter who has had a couple hit albums within the last few years. Shang is embarassed that he didn't recognise her sooner! He is also ashamed that he thought badly of her and what he thought she was doing.
+She is a rising singer/songwriter who has had a couple hit albums within the last few years. Shang is embarassed that he didn't recognise her sooner! He is also ashamed that he thought badly of her and what he thought she was doing.]
 
 
 
 --> [[Message his friend back]]
 
 
-:: Talk {"position":"2450,500","size":"100,100"}
+:: Talk {"position":"2600,500","size":"100,100"}
 (dialog: "The creature doesn't seem to understand you.", "Close")
 
-Before the sludge reaches him, it stops and looks at him intensely. The creature starts making some unearthly noises, like it's demanding something from him. Shang takes off his bag and empties it's contents infront of the thing, it's slimey fluid gets on everything while looking at what it will take. It swiftly swipes up the little food Shang had brought with him and scurries off back in the direction of the river.
+(align:"<==>")+(box:"X")[Before the sludge reaches him, it stops and looks at him intensely. The creature starts making some unearthly noises, like it's demanding something from him. Shang takes off his bag and empties it's contents infront of the thing, it's slimey fluid gets on everything while looking at what it will take. It swiftly swipes up the little food Shang had brought with him and scurries off back in the direction of the river.
 
-Shang picks everything else he had off of the ground and put them back into his bag, walking away from that bad encounter.
+
+Shang picks everything else he had off of the ground and put them back into his bag, walking away from that bad encounter.]
 
 
 
 --> [[At the association]]
 
 
-:: Talk to the bartender {"position":"2750,450","size":"100,100"}
+:: Talk to the bartender {"position":"2900,450","size":"100,100"}
+<!--If the player chose to fight the slime-->
+
 (if:(history: where its name contains "Fight")'s length >= 1)[(text-colour:#FFA718)[K: Woah buddy, it looks like you got roughed up outside. You can go use the washroom to clean yourself up, just don't make a mess.]]
 
-(if:(history: where its name contains "Talk")'s length >= 1)[(text-colour:#FFA718)[K: It looks like you're running low on food there. You're welcome to have some bar food of your choice, just don't treat it like a buffet.]]
 
-(text-colour:#FFA718)[K: Welcome to the association, buddy. What can I get you?]
+<!--If the player chose to talk to the slime-->
 
-
-
-:: report to an association {"position":"1950,500","size":"100,100"}
-Shang is overwhelmed with all this information, events that he's only seen occur in the games he's played is now being played out in the real world. All the channels on the TV are playing the same news story. The news anchor seems to be reporting by herself, in her own home, repeating the same message the mayor had: ''"report to an association, your country needs you"''.
+(if:(history: where its name contains "Talk")'s length is 1)+(text-colour:#FFA718)[K: Hey buddy, you look like you could use some comfort food. Would some (cycling-link:"congee","A form of rice porridge.") interest you?]
 
 
-Shang feels weak in the legs and supports himself on a chair in his flat. After what feels like hours, he pulls out his phone from his pocket and searches for where his closest "association" is online. 
+
+:: report to an association {"position":"2100,500","size":"100,100"}
+(align:"<==>")+(box:"X")[Shang is overwhelmed with all this information, events that he's only seen occur in the games he's played is now being played out in the real world. All the channels on the TV are playing the same news story. The news anchor seems to be reporting by herself, in her own home, repeating the same message the mayor had: ''"report to an association, your country needs you"''.
+
+
+Shang feels weak in the legs and supports himself on a chair in his flat. After what feels like hours, he pulls out his phone from his pocket and searches for where his closest "association" is online. ]
 
 
 --> [[Search Google Maps]]
 
 
-:: sludge {"position":"2250,500","size":"100,100"}
+:: sludge {"position":"2400,500","size":"100,100"}
 Select your move:
 
 [[Fight]]
@@ -242,16 +279,13 @@ Select your move:
 [[Run]]
 
 
-:: the headline {"position":"1800,500","size":"100,100"}
+:: the headline {"position":"1900,500","size":"100,100"}
 (enchant:?page,(text-colour:#212529)+(bg:white))
 #//(text-style:"underline")[Shanghai's (cycling-link:"Bund","The Bund is a waterfront area and a protected historical district in central Shanghai. The area runs along the western bank of the Huangpu River in the eastern part of Huangpu District. The area along the river faces the modern skyscrapers of Lujiazui in the Pudong District.") Shaken by Mysterious Explosion: Demonic Chaos Unleashed in the Night]//
 
-</style>
-<img
-src=https://www.goseewrite.com/wp-content/uploads/2014/09/Cina-Giorno-Otto-Shanghai-The-Bund.jpg>
-</div>
+<center><img src="https://www.goseewrite.com/wp-content/uploads/2014/09/Cina-Giorno-Otto-Shanghai-The-Bund.jpg" alt="Flynn!"></center>
 
-Shanghai, 19th July, 2018 – In a shocking turn of events, the iconic Bund in Shanghai became the epicenter of chaos last night, following a mysterious explosion that shattered the calm of the cityscape. The blast, which resonated across the Huangpu River, marked the beginning of an otherworldly nightmare as eyewitnesses reported the emergence of supernatural entities, likened to demons, roaming the streets.
+(align:"<==>")+(box:"X")[Shanghai, 19th July, 2018 – In a shocking turn of events, the iconic Bund in Shanghai became the epicenter of chaos last night, following a mysterious explosion that shattered the calm of the cityscape. The blast, which resonated across the Huangpu River, marked the beginning of an otherworldly nightmare as eyewitnesses reported the emergence of supernatural entities, likened to demons, roaming the streets.
 
 
 The explosion occurred at approximately 11PM, shattering windows and sending shockwaves throughout the historic waterfront area. Emergency services rushed to the scene, struggling to comprehend the eerie events that followed. Witnesses claimed to have seen bizarre creatures emerging from the smoky aftermath, with descriptions ranging from shadowy figures to grotesque entities. The ensuing pandemonium saw a surge in emergency calls, with first responders overwhelmed by the unprecedented situation.
@@ -262,7 +296,7 @@ Authorities, including local law enforcement and military personnel, worked tire
 
 The appearance of these eerie entities has left the city in shock and disbelief. Many are speculating about a potential link between the explosion and the sudden emergence of these supernatural beings. Scientists and experts from various fields are being summoned to provide insight into the nature of these entities and how to safely manage the situation.
 
-The situation remains fluid, and residents are advised to find their cloest association while exercising caution. As the sun rises, the city of Shanghai braces itself for the day of reckoning, hoping for answers that will quell the fear and uncertainty that has gripped this vibrant metropolis.
+The situation remains fluid, and residents are advised to find their cloest association while exercising caution. As the sun rises, the city of Shanghai braces itself for the day of reckoning, hoping for answers that will quell the fear and uncertainty that has gripped this vibrant metropolis.]
 
 
 
@@ -275,7 +309,7 @@ The situation remains fluid, and residents are advised to find their cloest asso
 <!--If the player confronted the stranger-->
 
 
-(if:(history: where its name contains "Confront the stranger")'s length is 1)[(text-colour:#adb5bd)[@](text-colour:#4dabf7)(cycling-link:"Zheng-Gong","Gong Zheng is a Chinese politician who serves as Mayor and Chinese Communist Party Deputy Committee Secretary of Shanghai."): My thoughts are with the people of Shanghai during this challenging time. We are closely monitoring the situation and working diligently to ensure the safety and well-being of our citizens. Let's remain calm, united, and resilient in the face of these unusual events. Together, we will overcome any challenges that come our way. For those who are able, please [[report to an association]], your city needs you. #ShanghaiStrong #💪🇨🇳
+(text-colour:#adb5bd)[@](text-colour:#4dabf7)(cycling-link:"Zheng-Gong","Gong Zheng is a Chinese politician who serves as Mayor and Chinese Communist Party Deputy Committee Secretary of Shanghai."): My thoughts are with the people of Shanghai during this challenging time. We are closely monitoring the situation and working diligently to ensure the safety and well-being of our citizens. Let's remain calm, united, and resilient in the face of these unusual events. Together, we will overcome any challenges that come our way. For those who are able, please [[report to an association]], your city needs you. #ShanghaiStrong #💪🇨🇳
 
 
 (text-colour:#adb5bd)[@](text-colour:#4dabf7)[the-real-one]: It's an inside job #conspiracy
@@ -294,32 +328,7 @@ The situation remains fluid, and residents are advised to find their cloest asso
 
 
 
-(text-colour:#adb5bd)[@](text-colour:#4dabf7)[ShanTi]:(input-box:"X=",2,"Add your comment")]
-
-
-<!--If the player went home-->
-
-
-(if:(history: where its name contains "Go home")'s length is 1)[(text-colour:#adb5bd)[@](text-colour:#4dabf7)(cycling-link:"Zheng-Gong","Gong Zheng is a Chinese politician who serves as Mayor and Chinese Communist Party Deputy Committee Secretary of Shanghai."): My thoughts are with the people of Shanghai during this challenging time. We are closely monitoring the situation and working diligently to ensure the safety and well-being of our citizens. Let's remain calm, united, and resilient in the face of these unusual events. Together, we will overcome any challenges that come our way. For those who are able, please [[report to an association]], your city needs you. #ShanghaiStrong #💪🇨🇳
-
-
-(text-colour:#adb5bd)[@](text-colour:#4dabf7)[the-real-one]: It's an inside job #conspiracy
-* (text-colour:#adb5bd)[@](text-colour:#4dabf7)[monff]: Really? 🙄
-* (text-colour:#adb5bd)[@](text-colour:#4dabf7)[pollqe42]: They really let the aliens from Area 51 escape 😂
-
-(text-colour:#adb5bd)[@](text-colour:#4dabf7)[tabby.xx]: Are they drafting people?
-
-
-
-(text-colour:#adb5bd)[@](text-colour:#4dabf7)[kinnft]: Has anyone been at the association yet? This is scary, I don't want to go.
-
-
-
-(text-colour:#adb5bd)[@](text-colour:#4dabf7)[qianlong]: Prayers go out to the people affected by this tragedy. Stay stong #Shanghai 💪
-
-
-
-(text-colour:#adb5bd)[@](text-colour:#4dabf7)[ShanTi]:(input-box:"X=",2,"Add your comment")]
+(text-colour:#adb5bd)[@](text-colour:#4dabf7)[ShanTi]:(input-box:"X=",2,"Add your comment")
 
 
 :: StoryScript [script]

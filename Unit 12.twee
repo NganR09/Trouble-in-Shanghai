@@ -28,7 +28,12 @@ Unit 12
 
 
 
-#(align:"=><=")+(box:"X")[''Made by Enjji'' ]
+
+
+
+
+
+#(t8n-depart:"zoom")+(t8n-arrive:"fade-down")+(t8n-time:0.3s)+(align:"=><=")+(box:"X")[[''Made by Enjji''->Title Screen]]
 
 
 :: Approach her {"position":"3200,700","size":"100,100"}
@@ -86,7 +91,7 @@ There are lots of people lined up at the bar waiting for a taste of the concocti
 Looking closer at the boards, Shang sees a constant flow of tasks flooding the screens, most of them requesting for various materials to be gathered from the surrounding areas. While others request demons to be slain which are giving people living in the (text-colour:#F1AD20)[(cycling-link:"Jinshan District","A suburban district of southwestern Shanghai, where this story is set.")] trouble. 
 
 
-People are everywhere, it's hard to maneuver around all of them.]
+People are everywhere, it's hard to manoeuver around all of them.]
 
 
 
@@ -460,14 +465,15 @@ Shang is directed to the left of the bar. While washing all of the dirt, slime a
 
 What is happening? 
 
-Is the government hiding something from us?
+Is the government hiding something from us?]
 
-...]]
+
+--> [[...]]]
 {
 
 <!--If the player chose to talk to the slime-->
 }
-(align:"<==>")+(box:"X")+(if:(history: where its name contains "Talk")'s length is 1)[(text-colour:#FFA718)[K: Hey buddy, you look like you could use some comfort food. Would some (text-colour:#F1AD20)[(cycling-link:"congee","A form of rice porridge, commonly found in East/Southeast Asia.")] interest you?]
+(align:"<==>")+(box:"X")[(if:(history: where its name contains "Talk")'s length is 1)[(text-colour:#FFA718)[K: Hey buddy, you look like you could use some comfort food. Would some (text-colour:#F1AD20)[(cycling-link:"congee","A form of rice porridge, commonly found in East/Southeast Asia.")] interest you?]
 
 
 Shang accepts the offer and goes to pay for the food.
@@ -482,12 +488,20 @@ Soon enough, the food is ready. Amongst the herd of people, Shang spots an open 
 
 What is happening? 
 
-Is the government hiding something from us?
+Is the government hiding something from us?]
 
---> [[...]]
+
+--> [[...]]]]
 
 
 :: Title Screen {"position":"1000,600","size":"100,100"}
+
+
+
+
+
+
+
 
 
 

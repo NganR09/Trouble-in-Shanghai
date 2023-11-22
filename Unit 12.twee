@@ -320,7 +320,7 @@ While waiting, he opens scrolls through the news on his phone and sees [[the hea
 {<!--If the player confronted the stranger-->
 
 }
-(if:(history: where its name contains "Ask her to delete the video")'s length >= 1)[(dialog: "Shang can't escape right now", "Close") Shang turns around to face the creature (link-undo:"again").
+(if:(history: where its name contains "Ask her to delete the video")'s length >= 1)[(dialog: "Shang can't escape right now", "Close") Shang turns around to face the creature (link-undo:"again").]
 {
 
 <!--If the player let her keep the video or went home-->
@@ -390,7 +390,7 @@ She is a rising singer/songwriter who has had a couple hit albums within the las
 Liang Yi wanders over to the bar and orders something from the bartender, paying with a few coins. Shang makes a mental note to pay her back at some point. Soon enough, she comes back over with two bowls in her hands.
 
 
-(text-colour:#D32525)[Liang Yi: Here, have some (text-colour:#7D3C98)[(cycling-link:"congee","A form of rice porridge, commonly found in East/Southeast Asia.")] Be careful, it is hot.]
+(text-colour:#D32525)[Liang Yi: Here, have some (text-colour:#F1AD20)[(cycling-link:"congee","A form of rice porridge, commonly found in East/Southeast Asia.")] Be careful, it is hot.]
 
 
 While eating, Shang realises that he has not introduced himself yet.
@@ -456,7 +456,7 @@ Shang picks everything else he has off of the ground and put them back into his 
 :: Talk to the bartender {"position":"3200,100","size":"100,100"}
 {<!--If the player chose to fight the slime-->
 }
-(align:"<==>")+(box:"X")[(if:(history: where its name contains "Fight")'s length >= 1)[(text-colour:#FFA718)[K: Woah buddy, it looks like you got roughed up outside. You can go use the lavatory to clean yourself up, just don't make a mess.]]
+(align:"<==>")+(box:"X")[(if:(history: where its name contains "Fight")'s length >= 1)[(text-colour:#FFA718)[K: Woah buddy, it looks like you got roughed up outside. You can go use the lavatory to clean yourself up, just don't make a mess.]
 
 
 Shang is directed to the left of the bar. While washing all of the dirt, slime and grime of of him and his clothing, he thinks to himself:
@@ -468,7 +468,7 @@ What is happening?
 Is the government hiding something from us?]
 
 
---> [[...]]]
+--> [[...]]]]
 {
 
 <!--If the player chose to talk to the slime-->

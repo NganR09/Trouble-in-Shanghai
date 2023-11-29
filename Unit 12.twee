@@ -287,7 +287,7 @@ The creature manages to take Shang to the ground, snarling in his face while on 
 :: Find a bathroom {"position":"3400,300","size":"100,100"}
 {<!--If the player chose to fight the slime-->
 }
-(align:"<==>")+(box:"X")[(text-colour:#D32525)[Liang Yi: Our clothes are dirty, we should go to (text-colour:#FFA718)[the bartender] so he can direct us to where we can get ourselves cleaned up.]
+(align:"<==>")+(box:"X")[(text-colour:#D32525)[Liang Yi: Our clothes are dirty; we should go to (text-colour:#FFA718)[the bartender], so he can direct us to where we can get ourselves cleaned up.]
 
 
 She approaches the bartender and he directs them to the left of the bar, where the lavatory is.
@@ -546,7 +546,7 @@ Now, with the help of her new companion, they can start clearing up the governme
 (align:"<==>")+(box:"X")[(if:(history: where its name contains "Fight")'s length >= 1)[(text-colour:#FFA718)[K: Woah buddy, it looks like you got roughed up outside. You can go use the lavatory to clean yourself up, just don't make a mess.]
 
 
-Shang is directed to the left of the bar. While washing all of the dirt, slime and grime of of him and his clothing, he thinks to himself:
+Shang is directed to the left of the bar. While washing all the dirt, slime and grime off of him and his clothing, he thinks to himself:
 
 (text-colour:#7D3C98)[What was that?
 

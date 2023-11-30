@@ -29,11 +29,10 @@ Unit 12
 
 
 
-
-
-
-
 #(t8n-depart:"zoom")+(t8n-arrive:"fade-down")+(t8n-time:0.3s)+(align:"=><=")+(box:"X")[[''Made by Enjji''->Title Screen]]
+
+
+
 
 
 :: Approach her {"position":"3400,700","size":"100,100"}
@@ -99,13 +98,16 @@ People are everywhere, it's hard to manoeuver around all of them.]
 
 
 :: Cheat {"position":"3000,700","size":"100,100"}
-(align:"<==>")+(box:"X")[(if:(history: where its name contains "Ask her to delete the video")'s length >= 1)[(text-colour:#2FA174)[YOOooouuuUU DiiIIiiiggGGG hhheeEEErrrrRRRee.]
+(align:"<==>")+(box:"X")[(if:(history: where its name contains "Ask her to delete the video")'s length >= 1)[{(dialog: "Shang successfully talks his way out of it.", "Close")
+
+}
+(text-colour:#2FA174)["YoU dIg HeRe."]
 
 
 Complying with the thing's demands, Shang puts down his bag and starts digging with his bare hands. He keeps on looking up to ensure that the creature will not take off with his belongings or attack him. It shows no signs of hostility so far.
 
 
-Once Shang's arms gets tired, he stands and faces the creature wondering if he had dug enough to satisfy it. After a few short seconds, the sludge smiles, (text-colour:#2FA174)[GooOOOOoodDDD. NOW THAT YOUR GRAVE!!!] It lunges at him.
+Once Shang's arms gets tired, he stands and faces the creature wondering if he had dug enough to satisfy it. After a few short seconds, the sludge smiles, (text-colour:#2FA174)["GoOd. NOW THAT YOUR GRAVE!!!"] It lunges at him.
 
 
 Startled, Shang dives for his bag and creates a bit of distance between him and the creature.
@@ -115,14 +117,27 @@ Startled, Shang dives for his bag and creates a bit of distance between him and 
 --> [[Fight]]]]
 {
 }
-(align:"<==>")+(box:"X")[(if:(history: where its name contains "Let her keep the video")'s length >= 1)[(text-colour:#2FA174)[I HaaAAAAvvvEEEee qqQQQUUUuuuEEssSSSSTTttttIIIIiiioooONnnn: Who better, human or MeeEEEee???]
+(align:"<==>")+(box:"X")[(if:(history: where its name contains "Let her keep the video")'s length >= 1)[{(dialog: "Shang successfully talks his way out of it.", "Close")
+}
+The creature gets close to Shang, examining him like a piece of fruit. (text-colour:#2FA174)["YoU lOoK gOoD fOr An OlD mAn."]
+
+
+It keeps on looking at him, from top to bottom. To say that Shang is feeling uncomfortable in this moment is an understatement. Thinking quickly, he decides to lie to the thing so it would not pay any interest in Liang Yi. (text-colour:#7D3C98)["Actually, I am a young woman."]
+
+
+The sludge retreats, (text-colour:#2FA174)["eEeEeKkKkK!!! YoU sUcH pRetTy WoMaN! sLimE ScArEd."]
+
+
+It bolts out of view, back in the direction of the river.
 
 
 
 --> [[At the association]]]]
 {
 }
-(align:"<==>")+(box:"X")[(if:(history: where its name contains "Go home")'s length >= 1)[(text-colour:#2FA174)[NooOOOoooOOOO. gIIIIIiiiivvvVVeeEEE NooOOOww!!!]
+(align:"<==>")+(box:"X")[(if:(history: where its name contains "Go home")'s length >= 1)[{(dialog: "Shang could not talk his way out of it.", "Close")
+}
+(text-colour:#2FA174)["NoOoOoOoO gIvE nOw!!!"]
 
 
 It does not seem like it will leave him alone until he gives it something.
@@ -530,14 +545,15 @@ Now, with the help of her new companion, they can start clearing up the governme
 
 
 
-(text-colour:#2FA174)["yOoooOOOuuUUu GiiiiIIIvvvVVEEEee??!"] It manages to regurgitate.]
+(text-colour:#2FA174)["yOu GiVe??!"] It manages to regurgitate.]
+
+--> [[Comply]]
 
 
-[[Comply]]
+--> [[Refuse]]
 
-[[Refuse]]
 
-[[Cheat]]
+--> [[Cheat]]
 
 
 :: Talk to the bartender {"position":"3400,100","size":"100,100"}
@@ -585,6 +601,16 @@ Is the government hiding something from us?]
 
 
 :: Title Screen {"position":"1000,600","size":"100,100"}
+
+
+
+
+
+
+
+
+
+
 #(t8n-depart:"flicker")+(t8n-arrive:"blur")+(t8n-time:0.3s)(click-goto:?page,"Day 1")(align:"=><=")+(box:"X")[(text-colour:#8C0000)[真•正的女神
 Trouble in Shanghai]]
 
@@ -660,11 +686,12 @@ Regaining his composure a bit, Shang searches for where his closest "association
 :: sludge {"position":"2600,500","size":"100,100"}
 Select your move:
 
-[[Fight]]
 
-[[Talk]]
+--> [[Fight]]
 
-[[Run]]
+--> [[Talk]]
+
+--> [[Run]]
 
 
 :: the headline {"position":"2000,500","size":"100,100"}

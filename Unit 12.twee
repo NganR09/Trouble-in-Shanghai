@@ -32,9 +32,6 @@ Unit 12
 #(t8n-depart:"zoom")+(t8n-arrive:"fade-down")+(t8n-time:0.3s)+(align:"=><=")+(box:"X")[[''Made by Enjji''->Title Screen]]
 
 
-
-
-
 :: Approach her {"position":"3400,700","size":"100,100"}
 {<!--If the player chose to run from the slime-->
 }
@@ -119,10 +116,10 @@ Startled, Shang dives for his bag and creates a bit of distance between him and 
 }
 (align:"<==>")+(box:"X")[(if:(history: where its name contains "Let her keep the video")'s length >= 1)[{(dialog: "Shang successfully talks his way out of it.", "Close")
 }
-The creature gets close to Shang, examining him like a piece of fruit. (text-colour:#2FA174)["YoU lOoK gOoD fOr An OlD mAn."]
+The creature gets close to Shang and Liang Yi, examining them like a piece of fruit. It turns towards him, (text-colour:#2FA174)["YoU lOoK gOoD fOr An OlD mAn."]
 
 
-It keeps on looking at him, from top to bottom. To say that Shang is feeling uncomfortable in this moment is an understatement. Thinking quickly, he decides to lie to the thing so it would not pay any interest in Liang Yi. (text-colour:#7D3C98)["Actually, I am a young woman."]
+It keeps on looking at him, from top to bottom. To say that Shang is feeling uncomfortable in this moment is an understatement. Thinking quickly, he decides to lie to the thing so it would not pay any more interest in Liang Yi. (text-colour:#7D3C98)["Actually, I am a young woman."]
 
 
 The sludge retreats, (text-colour:#2FA174)["eEeEeKkKkK!!! YoU sUcH pRetTy WoMaN! sLimE ScArEd."]
@@ -601,16 +598,6 @@ Is the government hiding something from us?]
 
 
 :: Title Screen {"position":"1000,600","size":"100,100"}
-
-
-
-
-
-
-
-
-
-
 #(t8n-depart:"flicker")+(t8n-arrive:"blur")+(t8n-time:0.3s)(click-goto:?page,"Day 1")(align:"=><=")+(box:"X")[(text-colour:#8C0000)[真•正的女神
 Trouble in Shanghai]]
 

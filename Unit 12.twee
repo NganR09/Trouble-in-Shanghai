@@ -6,7 +6,7 @@ Unit 12
 {
   "ifid": "28080F40-03E2-4A36-B435-8E41C404A405",
   "format": "Harlowe",
-  "format-version": "3.3.7",
+  "format-version": "3.3.8",
   "start": "Title Screen",
   "tag-colors": {
     "Test": "purple"
@@ -721,30 +721,6 @@ People are everywhere, but out of the crowd, Shang sees a familiar face. The hom
 
 
 [--> (text-colour:#7D3C98)+(bg:white)[[Approach her]]]
-
-
-:: Untitled Passage {"position":"2500,700","size":"100,100"}
-(link-reveal:"Loooool")[Funny funny demon]
-
-(link-rerun:"Money")[You give now]
-
-(link-repeat:"You dig here")[That your grave]
-
-
-
-(seq-link:"Loooool","Funny funny demon")
-
-
-(cycling-link:"Human or demon?","Demon","Demon","Demon")
-
-
-(seq-link:"Human ","Yes","No","Maybe")
-
-
-(cycling-link:"Human or demon?","Demon","Demon","Demon","")
-
-
-(t8n:"slide-up")+(t8n-time:0.5s)+(link:"Comments")[Your Text Here]
 
 
 :: hal.tracks {"position":"900,400","size":"100,100"}
